@@ -9,6 +9,7 @@ graphify-out/
 .vscode/
 DEPLOYMENT_CHECKLIST.md
 backend/logs/
-backend/
+backend/node_modules/
+backend/.env
 database/
 
