@@ -37,7 +37,11 @@ export default function Login() {
     try {
       const user = await login(form.email, form.password);
       toast.success('Logged in successfully');
-      navigate(user.role === 'admin' ? '/admin' : '/');
+      if (user.role === 'admin') {
+        window.location.href = 'https://prime-laptops-store-admin-dashboard.onrender.com';
+      } else {
+        navigate('/');
+      }
     } catch (err) {
       if (!err.response) {
         setFormErr('Unable to connect. Please check your connection.');

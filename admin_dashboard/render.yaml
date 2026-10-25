@@ -1,0 +1,9 @@
+services:
+  - type: static_site
+    name: prime-laptops-store-admin-dashboard
+    buildCommand: cd admin_dashboard && npm install && npm run build
+    staticPublishPath: admin_dashboard/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

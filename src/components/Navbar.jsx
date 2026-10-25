@@ -35,14 +35,14 @@ export default function Navbar({ theme, onToggleTheme }) {
             <Link to="/" className={`hover:text-cyan transition-colors ${location.pathname === '/' ? 'text-cyan' : ''}`}>Home</Link>
             <Link to="/products" className={`hover:text-cyan transition-colors ${location.pathname.startsWith('/products') ? 'text-cyan' : ''}`}>Shop</Link>
             {user?.role === 'admin' && (
-              <>
-                <Link to="/admin" className={`hover:text-cyan transition-colors ${location.pathname.startsWith('/admin') ? 'text-cyan' : ''}`}>
-                  Admin Panel
-                </Link>
-                <Link to="/admin/settings" className={`hover:text-cyan transition-colors ${location.pathname.startsWith('/admin/settings') ? 'text-cyan' : ''}`}>
-                  Settings
-                </Link>
-              </>
+              <a
+                href="https://prime-laptops-store-admin-dashboard.onrender.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-cyan hover:underline flex items-center gap-1 font-mono text-xs uppercase"
+              >
+                Admin Portal ↗
+              </a>
             )}
           </div>
 
