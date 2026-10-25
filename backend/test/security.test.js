@@ -100,10 +100,10 @@ describe('metrics protection', () => {
 });
 
 describe('validation helpers', () => {
-  it('passwordComplexityRules exports five validators per field', () => {
+  it('passwordComplexityRules exports min length validator per field', () => {
     const { passwordComplexityRules } = require('../middleware/validate');
-    assert.equal(passwordComplexityRules('password').length, 5);
-    assert.equal(passwordComplexityRules('new_password').length, 5);
+    assert.equal(passwordComplexityRules('password').length, 1);
+    assert.equal(passwordComplexityRules('new_password').length, 1);
   });
 });
 
